@@ -309,16 +309,6 @@
   .contact-text h4 {
     font-size: 16px;
   }
-
-  .form-control {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .submit-btn {
-    padding: 10px 25px;
-    font-size: 14px;
-  }
 }
 
 /* Extra Small Devices */
@@ -352,19 +342,6 @@
 
   .card-content h3 {
     font-size: 18px;
-  }
-
-  .contact-item {
-    flex-direction: column;
-  }
-
-  .contact-icon {
-    margin-bottom: 10px;
-    margin-right: 0;
-  }
-
-  .contact-text {
-    text-align: center;
   }
 }
 

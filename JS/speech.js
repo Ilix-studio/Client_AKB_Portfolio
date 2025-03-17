@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
   ttsButton.style.display = "flex";
   ttsButton.style.alignItems = "center";
   ttsButton.style.gap = "8px";
-  ttsButton.style.backgroundColor = "var(--secondary)";
+  ttsButton.style.backgroundColor = "#364E68";
   ttsButton.style.color = "var(--white)";
   ttsButton.style.border = "none";
   ttsButton.style.borderRadius = "5px";
-  ttsButton.style.padding = "10px 20px";
+  ttsButton.style.padding = "10px 25px";
   ttsButton.style.margin = "20px 0";
   ttsButton.style.cursor = "pointer";
   ttsButton.style.transition = "background-color 0.3s";

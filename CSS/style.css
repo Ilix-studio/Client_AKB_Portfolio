@@ -170,7 +170,7 @@ body {
 
 .contact-btn {
   display: inline-block;
-  background-color: var(--secondary);
+  background-color: "#EBF0F6";
   color: var(--white);
   padding: 10px 20px;
   border-radius: 50px;
