@@ -665,3 +665,87 @@ footer {
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+/* About-section-speech-button */
+/* Add these styles to your style.css file */
+
+.tts-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--secondary);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: 500;
+}
+
+.tts-button:hover {
+  background-color: #b18e22;
+  transform: translateY(-2px);
+}
+
+.tts-button:active {
+  transform: translateY(0);
+}
+
+.tts-icon {
+  font-size: 18px;
+}
+
+/* Accessibility focus styles */
+.tts-button:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Copyright Section below contact section  */
+.copyright-section {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.copyright-section p {
+  color: var(--dark);
+  font-size: 14px;
+}
+
+.developer-link {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.developer-link:hover {
+  color: var(--secondary);
+}
+
+/* Add a visual loading indicator while speaking */
+.tts-button.speaking .tts-icon {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustment */
+@media (max-width: 576px) {
+  .tts-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
