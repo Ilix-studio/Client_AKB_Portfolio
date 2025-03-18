@@ -356,6 +356,48 @@ section {
   color: var(--dark);
 }
 
+/* Adding the Listen button  */
+/* Text-to-Speech Button Styles */
+.tts-container {
+  margin-top: 20px;
+}
+
+.tts-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tts-button:hover {
+  background-color: #15325c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tts-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tts-button.speaking {
+  background-color: var(--secondary);
+}
+
+.tts-icon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
 /* Timeline */
 .timeline {
   background-color: var(--white);

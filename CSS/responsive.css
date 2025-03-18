@@ -263,6 +263,10 @@
   .logo-text {
     font-size: 18px;
   }
+  .tts-button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
 
   .timeline-content {
     padding: 12px;

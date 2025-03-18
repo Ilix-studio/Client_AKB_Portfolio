@@ -51,114 +51,54 @@ window.addEventListener("scroll", () => {
 });
 
 // Add this code to your main.js file
+// Text-to-Speech functionality
 
-// Initialize text-to-speech functionality for the About section
 document.addEventListener("DOMContentLoaded", function () {
-  // Get the about section paragraphs
-  const aboutParagraphs = document.querySelectorAll("#about .about-text p");
+  // Find the listen button
+  const listenButton = document.querySelector("#listen-button");
 
-  // Create a combined text of all paragraphs
-  const aboutText = Array.from(aboutParagraphs)
-    .map((p) => p.textContent)
-    .join(" ");
+  if (listenButton) {
+    listenButton.addEventListener("click", function () {
+      // Get the text to read from the about section
+      const aboutTextElements = document.querySelectorAll(".about-text p");
+      let textToRead = "";
 
-  // Create the text-to-speech button
-  const ttsButton = document.createElement("button");
-  ttsButton.innerHTML = '<span class="tts-icon">🔊</span> Listen';
-  ttsButton.classList.add("tts-button");
-  ttsButton.title = "Listen to this text";
+      // Combine all paragraphs in the about section
+      aboutTextElements.forEach((paragraph) => {
+        textToRead += paragraph.textContent + " ";
+      });
 
-  // Add styles programmatically (you can move these to your CSS file)
-  ttsButton.style.display = "flex";
-  ttsButton.style.alignItems = "center";
-  ttsButton.style.gap = "8px";
-  ttsButton.style.backgroundColor = "#364E68";
-  ttsButton.style.color = "var(--white)";
-  ttsButton.style.border = "none";
-  ttsButton.style.borderRadius = "5px";
-  ttsButton.style.padding = "10px 25px";
-  ttsButton.style.margin = "20px 0";
-  ttsButton.style.cursor = "pointer";
-  ttsButton.style.transition = "background-color 0.3s";
+      // Create speech synthesis utterance
+      const utterance = new SpeechSynthesisUtterance(textToRead);
 
-  // Add hover effect
-  ttsButton.addEventListener("mouseover", function () {
-    this.style.backgroundColor = "#132238";
-  });
+      // Set properties for the speech
+      utterance.lang = "en-US";
+      utterance.rate = 1.2; // Slightly slower than default
+      utterance.pitch = 0;
 
-  ttsButton.addEventListener("mouseout", function () {
-    this.style.backgroundColor = "var(--secondary)";
-  });
+      // Optional: Add visual feedback when speaking starts and ends
+      utterance.onstart = function () {
+        listenButton.classList.add("speaking");
+        listenButton.innerHTML = '<span class="tts-icon">⏸️</span> Pause';
+      };
 
-  // Variables to control speech
-  let isSpeaking = false;
-  let speechSynthesis = window.speechSynthesis;
-  let speechUtterance = null;
+      utterance.onend = function () {
+        listenButton.classList.remove("speaking");
+        listenButton.innerHTML = '<span class="tts-icon">🔊</span> Listen';
+      };
 
-  // Add click event to button
-  ttsButton.addEventListener("click", function () {
-    if (isSpeaking) {
-      // Stop speaking
-      speechSynthesis.cancel();
-      isSpeaking = false;
-      ttsButton.innerHTML = '<span class="tts-icon">🔊</span> Listen';
-    } else {
-      // Start speaking
-      speechUtterance = new SpeechSynthesisUtterance(aboutText);
-
-      // Set voice properties
-      speechUtterance.rate = 1.2; // Speaking rate (0.1 to 10)
-      speechUtterance.pitch = 0; // Speaking pitch (0 to 2)
-      speechUtterance.volume = 1; // Volume (0 to 1)
-
-      // Optional: Select a voice
-      const voices = speechSynthesis.getVoices();
-      if (voices.length > 0) {
-        // Try to find an English voice
-        const englishVoice = voices.find((voice) => voice.lang.includes("en-"));
-        if (englishVoice) {
-          speechUtterance.voice = englishVoice;
+      // Check if already speaking and toggle
+      if (window.speechSynthesis.speaking) {
+        if (window.speechSynthesis.paused) {
+          window.speechSynthesis.resume();
+        } else {
+          window.speechSynthesis.pause();
+          listenButton.innerHTML = '<span class="tts-icon">▶️</span> Resume';
         }
+      } else {
+        // Start speaking
+        window.speechSynthesis.speak(utterance);
       }
-
-      // Event handlers for speech
-      speechUtterance.onstart = function () {
-        isSpeaking = true;
-        ttsButton.innerHTML = '<span class="tts-icon">⏹️</span> Stop';
-      };
-
-      speechUtterance.onend = function () {
-        isSpeaking = false;
-        ttsButton.innerHTML = '<span class="tts-icon">🔊</span> Listen';
-      };
-
-      speechUtterance.onerror = function () {
-        isSpeaking = false;
-        ttsButton.innerHTML = '<span class="tts-icon">🔊</span> Listen';
-        console.error("Speech synthesis error occurred");
-      };
-
-      // Start speaking
-      speechSynthesis.speak(speechUtterance);
-    }
-  });
-
-  // Add button to the about section
-  const aboutContent = document.querySelector("#about .about-text");
-  aboutContent.appendChild(ttsButton);
-
-  // Handle page unload to stop speech
-  window.addEventListener("beforeunload", function () {
-    if (isSpeaking) {
-      speechSynthesis.cancel();
-    }
-  });
-
-  // Fix for Safari/Chrome bug where voices may not be available immediately
-  if (speechSynthesis.onvoiceschanged !== undefined) {
-    speechSynthesis.onvoiceschanged = function () {
-      // This will run when voices are loaded
-      console.log("Voices loaded");
-    };
+    });
   }
 });
