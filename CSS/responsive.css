@@ -159,6 +159,7 @@
     width: 100%;
     padding-left: 70px;
     padding-right: 15px;
+    left: 0 !important;
   }
 
   .timeline-item:nth-child(even) {
@@ -166,7 +167,8 @@
   }
 
   .timeline-item::after {
-    left: 20px;
+    left: 20px !important;
+    right: auto !important;
   }
 
   .timeline-content {
