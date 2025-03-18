@@ -2,7 +2,7 @@
 
 // Select all elements to animate
 const revealElements = document.querySelectorAll(
-  ".section-title, .about-content, .timeline-item, .accomplishment-card, .philanthropy-item, .contact-item"
+  ".section-title, .about-content, .accomplishment-card, .philanthropy-item, .contact-item"
 );
 
 // Configure the Intersection Observer
@@ -46,7 +46,7 @@ fadeUpElements.forEach((element) => {
 
 // Staggered animation for items in a container
 const staggerContainers = document.querySelectorAll(
-  ".accomplishments-container, .timeline-container"
+  ".accomplishments-container"
 );
 staggerContainers.forEach((container) => {
   // Get all child elements that should be animated with delay

@@ -52,7 +52,7 @@
 /* Special animations for specific sections */
 
 /* Timeline items animation */
-.timeline-item {
+/* .timeline-item {
   opacity: 0;
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
@@ -68,7 +68,7 @@
 .timeline-item.revealed {
   opacity: 1;
   transform: translateX(0);
-}
+} */
 
 /* Accomplishment cards animation */
 .accomplishment-card {
