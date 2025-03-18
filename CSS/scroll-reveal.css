@@ -76,7 +76,7 @@
 }
 
 /* Philanthropy items animation */
-.philanthropy-item {
+/* .philanthropy-item {
   opacity: 0;
   transform: translateY(30px) scale(0.95);
   transition: opacity 0.7s ease, transform 0.7s ease, box-shadow 0.3s ease;
@@ -85,16 +85,4 @@
 .philanthropy-item.revealed {
   opacity: 1;
   transform: translateY(0) scale(1);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .timeline-item:nth-child(odd),
-  .timeline-item:nth-child(even) {
-    transform: translateY(30px);
-  }
-
-  .timeline-item.revealed {
-    transform: translateY(0);
-  }
-}
+} */

@@ -2,7 +2,7 @@
 
 // Select all elements to animate
 const revealElements = document.querySelectorAll(
-  ".section-title, .about-content, .accomplishment-card, .philanthropy-item, .contact-item"
+  ".section-title, .about-content, .accomplishment-card, .contact-item"
 );
 
 // Configure the Intersection Observer
@@ -37,7 +37,7 @@ revealElements.forEach((element) => {
 // Additional observers for specific animation types
 // Fade-in-up animation for specific elements
 const fadeUpElements = document.querySelectorAll(
-  ".hero-content, .personal-info, .philanthropy-grid"
+  ".hero-content, .personal-info"
 );
 fadeUpElements.forEach((element) => {
   element.classList.add("fade-up");
