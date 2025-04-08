@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- Homepage -->
+  <url>
+    <loc>https://amritburagohain.com/</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://amritburagohain.com/assets/AB.png</image:loc>
+      <image:title>Amrit Kumar Buragohain</image:title>
+      <image:caption>Entrepreneur and Philanthropist from Assam</image:caption>
+    </image:image>
+    <video:video>
+      <video:content_loc>https://amritburagohain.com/assets/ABvideo.mp4</video:content_loc>
+      <video:title>Amrit Kumar Buragohain Background Video</video:title>
+      <video:description>A background video showcasing Amrit Kumar Buragohain's work and achievements</video:description>
+      <video:thumbnail_loc>https://amritburagohain.com/images/amrit-kumar-buragohain.jpg</video:thumbnail_loc>
+    </video:video>
+  </url>
+  
+  <!-- About Section -->
+  <url>
+    <loc>https://amritburagohain.com/#about</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Journey Section -->
+  <url>
+    <loc>https://amritburagohain.com/#journey</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Accomplishments Section -->
+  <url>
+    <loc>https://amritburagohain.com/#accomplishments</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://amritburagohain.com/assets/accomplishment/buses.jpg</image:loc>
+      <image:title>Transport Business</image:title>
+      <image:caption>Pioneer in Transport Business in Golaghat</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://amritburagohain.com/assets/accomplishment/construction.jpg</image:loc>
+      <image:title>Construction Projects</image:title>
+      <image:caption>Infrastructure Development Projects</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://amritburagohain.com/assets/accomplishment/school.jpg</image:loc>
+      <image:title>Educational Initiatives</image:title>
+      <image:caption>Amrit International School</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://amritburagohain.com/assets/accomplishment/temple.jpg</image:loc>
+      <image:title>Cultural Preservation</image:title>
+      <image:caption>Barnamghar Donation</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://amritburagohain.com/assets/accomplishment/entrepreneurship.jpg</image:loc>
+      <image:title>Entrepreneur Mentoring</image:title>
+      <image:caption>Supporting New Entrepreneurs</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://amritburagohain.com/assets/accomplishment/agriculture.jpg</image:loc>
+      <image:title>Agricultural Innovation</image:title>
+      <image:caption>Modern Farming Practices</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Philanthropy Section -->
+  <url>
+    <loc>https://amritburagohain.com/#philanthropy</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Contact Section -->
+  <url>
+    <loc>https://amritburagohain.com/#contact</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
