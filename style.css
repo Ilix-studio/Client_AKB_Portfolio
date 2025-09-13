@@ -1254,3 +1254,8 @@ footer {
     animation: none !important;
   }
 }
+.payment_issue {
+  color: red;
+  display: flex;
+  justify-content: center;
+}
